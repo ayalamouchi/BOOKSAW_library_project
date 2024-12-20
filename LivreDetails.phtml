@@ -1,0 +1,188 @@
+<div class="book-card">
+    <!-- Flèche de retour -->
+    <div class="back-arrow">
+        <a href="javascript:history.back();">
+            <i class="bi bi-arrow-left-circle"></i>
+        </a>
+    </div>
+
+    <!-- Section principale du livre -->
+    <div class="book-content">
+        <!-- Image du livre -->
+        <div class="book-cover">
+            <img src="<?= $livre["image"] ?>" alt="Book Cover">
+        </div>
+
+        <!-- Informations et actions -->
+        <div class="book-details">
+            <div class="book-info">
+                <h2 class="book-title"><?= $livre["titre"] ?></h2>
+                <h3 class="book-author"><?= $livre["auteur"] ?></h3>
+                <div class="book-rating">
+                    ★★★★☆
+                </div>
+                <p class="book-description">
+                    <?= $livre["resume"] ?>
+                </p>
+            </div>
+            <div class="book-actions">
+                <button class="btn read-btn">Read</button>
+                <button class="btn listen-btn">Listen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Icônes de partage -->
+    <div class="share-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+</div>
+
+<style>
+/* Corps général */
+body {
+    font-family: 'Georgia', serif; /* Applique la police Georgia */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e6c8a3 50%, #f7f7f7 50%); /* Dégradé vers marron clair et nude */
+    color: #333;
+}
+
+/* Conteneur principal */
+.book-card {
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+/* Flèche de retour */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-arrow a {
+    color: #b9937c; /* Marron doux clair */
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-arrow a:hover {
+    color: #9e7d61;
+}
+
+/* Contenu du livre */
+.book-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Image du livre */
+.book-cover {
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.book-cover img {
+    width: 380px; /* Agrandir l'image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Informations sur le livre */
+.book-details {
+    flex: 1;
+    padding: 20px;
+    color: #5a5a5a;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.book-title {
+    font-size: 2.5rem; /* Agrandir le titre */
+    color: #3a3a3a;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif; /* Police Georgia pour le titre */
+}
+
+.book-author {
+    font-size: 1.5rem;
+    color: #6c6c6c;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif; /* Police Georgia pour l'auteur */
+}
+
+.book-rating {
+    font-size: 1.4rem;
+    color: #f1c40f;
+    margin-bottom: 15px;
+}
+
+.book-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #7a7a7a;
+    margin-top: 15px;
+}
+
+/* Boutons */
+.book-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.book-actions .btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.read-btn {
+    background-color: #cba38d; /* Marron clair pour le bouton "Read" */
+    color: #fff;
+}
+
+.read-btn:hover {
+    background-color: #b3826f;
+}
+
+.listen-btn {
+    background-color: #e1b09e; /* Beige marron doux pour le bouton "Listen" */
+    color: #fff;
+}
+
+.listen-btn:hover {
+    background-color: #d29e86;
+}
+
+/* Icônes de partage */
+.share-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: cente
+}

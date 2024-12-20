@@ -1,0 +1,21 @@
+<div id="dA">
+<div class="Details_ADR" >
+      <div id="img_Adhrent"><img src="assets/im_a3.jpg"alt="img_adherent" id="Adhrent_Profil"></div>
+      <div id="A_det_personelle">
+        
+        <p class="det_nom">Hi, Im <?= $adherent["nom"]." ".$adherent["prenom"]  ?></p>
+        <p class="paragraph">
+        <strong id="for">For You :</strong> Our platform is dedicated to providing the best experience for all our members. 
+        As an adherent, you are part of a growing community where knowledge, collaboration, and innovation come together.
+            </p>
+        <p class="A_info"><span class="infA">E-mail: </span><?=$adherent["email"] ?></p>
+        <p class="A_info"><span class="infA">Date of birth :</span> <?=$adherent["date_naiss"] ?></p>
+        <p class="A_info"><span class="infA">Adherent Type :</span> <?=$adherent["type_adherent"] ?></p>
+        <p class="A_info"><span class="infA">Gender :</span> <?=$adherent["genre"] ?></p>
+        <div id="Button_Adr_reg">
+        <a class="btn_Up_Adhrent" href="adherants_update.php?id=<?=$adherent["id"]?>" ><i class="bi bi-pencil-square" style="color: #fff  !important;"></i></a>
+        <a class="btn_Supp_Adhrent" href="adherantssupp.php?id=<?=$adherent["id"]?>" ><i class="bi bi-person-x"style="color: #fff  !important;"></i></a>
+        </div>
+      </div>
+</div>
+</div>

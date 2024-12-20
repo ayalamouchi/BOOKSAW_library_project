@@ -1,0 +1,55 @@
+
+<div id="bodyAdherents">
+  <div class="container">
+    <h2 class="text-center mb-4 text-primary">Liste des Adhérents</h2>
+
+    <?php if (array_key_exists("message", $_GET)): ?>
+        <div class="alert alert-success text-center">
+            <?= $_GET['message']; ?>
+        </div>
+    <?php endif; ?>
+
+    <a href="./AddAdherant/index.php" class="d-block text-center mb-4">
+        <button class="btn btn-success btn-lg">
+            <i class="fa fa-plus"></i> <i class="bi bi-person-fill-add"></i> Ajouter un Adhérant
+        </button>
+    </a>
+
+    <div class="row">
+        <?php if (count($res) === 0): ?>
+            <p class="text-center">Aucun adhérent trouvé.</p>
+        <?php else: ?>
+            <?php foreach ($res as $val): ?>
+                <div class="col-md-4 mb-4">
+                    <div class="card" id="adherent_card">
+                        <div class="image-container text-center p-3">
+                            <img src="assets\images\users\Capture.PNG" class="card-img-top rounded-circle" alt="Photo de <?= $val['nom'] ?>" style="width: 100px; height: 100px;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><?= $val['nom'] ?> <?= $val['prenom'] ?></h5>
+                            <p class="card-text text-center"><?= $val['email'] ?></p>
+                            <div class="d-flex justify-content-center">
+                                <a href="AdherentDetails.php?id=<?= $val['id'] ?>" class="btn btn-primary btn-sm">Voir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+  </div>
+</div>
+
+<style>
+  #adherent_card .card-img-top {
+      object-fit: cover;
+      border: 2px solid #007bff;
+  }
+  #adherent_card .card-body {
+      text-align: center;
+  }
+  #adherent_card .btn-primary {
+      background-color: #007bff;
+      border: none;
+  }
+</style>

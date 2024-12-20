@@ -1,0 +1,59 @@
+,
+<form id="adherent-form" method="POST" action="<?= $_SERVER['PHP_SELF']?>">
+ <input type="hidden" name="id" value="<?= $adherants['id'] ?>">
+        <h2>UPDATE ADHERENT</h2> 
+        
+        <div class="form-row">
+            <label for="nom">First Name :</label>
+            <input type="text" id="nom" name="nom"  value="<?= $adherants['nom'] ?>">
+        </div>
+        
+        <div class="form-row">
+            <label for="prenom">Last Name :</label>
+            <input type="text" id="prenom" name="prenom"value="<?=$adherants['prenom'] ?>">
+        </div>
+
+        
+
+        <div class="form-row">
+            <label for="mot_de_passe">Password :</label>
+            <input type="text" id="mot_de_passe" name="mot_de_passe" value="<?= $adherants['password'] ?>">
+        </div>
+<!--
+        <div class="form-row">
+            <label for="telephone">Phone Number :</label>
+            
+        </div>
+-->
+        <div class="form-row">
+            <label for="date_naissance">Date of Birth :</label>
+            <input type="text" id="date_naissance" name="date_naissance" value="<?= $adherants['date_naiss'] ?>">
+        </div>
+
+
+        <div class="form-row">
+            <label for="type_adherent">Adherent Type :</label>
+            <input type="text" id="type_adherent" name="type_adherent"value="<?= $adherants['type_adherent'] ?>">
+        </div>
+
+        <div class="form-row">
+            
+            <input type="checkbox" id="h" name="sexe" value="Man" checked>
+            <label for="sexe">Man</label>
+
+        <input type="checkbox" id="f" name="sexe" value="Woman">
+        <label for="sexe">Woman</label>
+        <input type="checkbox" id="a" name="sexe" value="Other">
+        <label for="sexe">Other</label>
+        </div>
+        <div class="form-row">
+            <label for="genre">Gender :</label>
+            <input type="number" id="genre" name="genre" value="<?= $adherants['genre'] ?>">
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-submit" type="submit"><i class="bi bi-person-fill-add" style="color:white"></i></button>
+            <button class="btn btn-reset" type="reset"><i class="bi bi-person-fill-x" style="color:white"></i></button>
+        </div>
+    			
+</form>

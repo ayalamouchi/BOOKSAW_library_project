@@ -1,0 +1,66 @@
+<form id="book-form" method="POST" action="AjoutLivre.php" >
+    <h2>ADD BOOK</h2>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="titre">Title :</label>
+            <input type="text" id="titre" name="titre" class="inp">
+        </div>
+        <div class="form-group">
+            <label for="auteur">Author :</label>
+            <input type="text" id="auteur" name="auteur" class="inp">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="genre">Gender :</label>
+            <input type="text" id="genre" name="genre" class="inp">
+        </div>
+        <div class="form-group">
+            <label for="resume">Summarizes :</label>
+            <textarea id="resume" name="resume" class="inp"></textarea>
+        </div>
+    </div>
+
+    <div class="checkbox-group">
+        <input type="checkbox" id="disponibilite" name="disponibilite" value="1" checked>
+        <label for="disponibilite">Available</label>
+
+        <input type="checkbox" id="emprunte" name="disponibilite" value="0">
+        <label for="emprunte">Emprunté</label>
+    </div>
+
+   
+    <div class="form-row">
+        <div class="form-group">
+            <label for="nombre_exemplaires">Number of copies :</label>
+            <input type="number" id="nombre_exemplaires" name="nombre_exemplaires" min="1" value="1" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="langue">Language :</label>
+            <input type="text" id="langue" name="langue" class="form-control">
+        </div>
+    </div>
+
+   
+    <div class="form-row">
+        <div class="form-group">
+            <label for="image_couverture">Cover image (URL) :</label>
+            <input type="text" id="image_couverture" name="image_couverture" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="nombre_pages">Number of pages :</label>
+            <input type="number" id="nombre_pages" name="nombrePages" min="1" class="form-control">
+        </div>
+    </div>
+
+    
+    <div class="btn-group">
+        <button type="submit" class="btn btn-submit"><i class="bi bi-journal-plus" style="color:white"></i></button>
+        <button type="reset" class="btn btn-reset"><i class="bi bi-journal-minus"style="color:white"></i></button>
+    </div>
+
+    
+</form>
+

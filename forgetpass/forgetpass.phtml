@@ -1,0 +1,30 @@
+
+<div class="mt-5 py-5">
+    <div class="d-flex justify-content-center">
+        <div class="col-xl-10">
+            <div class="row shadow-lg rounded">
+                <div class="col-lg-6 py-2 text-center">
+                    <h1 class="mb-2 py-3 fw-bolder">FORGOT PASSWORD</h1>
+                    <form action="index.php" method="post" class="py-5 container">
+                       
+                        <div class="mb-2">
+                            <input type="email" placeholder="Email" name="email"
+                                class="form-control <?= array_key_exists("email", $errors) ? 'is-invalid' : '' ?>"
+                                value="<?= $email ?>">
+                            <small
+                                class="text-danger"><?= array_key_exists("email", $errors) ? $errors['email'] : '' ?></small>
+                        </div>
+                        
+                        <div class="mt-2">
+                            <button name="send" type="submit" class="btn btn-success signup">Send Code</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 d-lg-block d-none">
+                    <lottie-player src="https://lottie.host/0bea6f44-c61e-4582-943f-4565913fa134/Z8rzmCCAlL.json"
+                        speed="1" loop autoplay style="width: 100%;height:100%"></lottie-player>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

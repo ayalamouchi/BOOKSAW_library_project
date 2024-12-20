@@ -1,0 +1,46 @@
+
+<form id="book-form" action="Livreupdate.php" method="post">
+  <input type="hidden" name="id" value="<?= $livres['id'] ?>">
+    <h2>UPDATE BOOK</h2>
+  <div class="form-row">
+    <label for="titre">Title :</label>
+    <input type="text" name="titre" class="form-control" value="<?= $livres['titre'] ?>" id="titre">
+  </div>
+  <div class="form-row">
+    <label for="auteur">Author :</label>
+    <input type="text" name="auteur" class="form-control" value="<?= $livres['auteur'] ?>" id="auteur">
+  </div>
+  <div class="form-row">
+    <label for="genre">Gender :</label>
+    <input type="text" name="genre" class="form-control" value="<?= $livres['genre'] ?>" id="genre">
+  </div>
+  <div class="form-row">
+    <label for="resume">Summarizes :</label>
+    <input type="text" name="resume" class="form-control" value="<?= $livres['resume'] ?>" id="resume">
+  </div>
+  <div class="form-row">
+    <label for="disponibilite">Availability :</label>
+    <input type="text" name="disponibilite" class="form-control" value="<?= $livres['disponibilite'] ?>" id="disponibilite">
+  </div>
+  <div class="form-row">
+    <label for="nbexp">Number of copies :</label>
+    <input type="text" name="nbexp" class="form-control" value="<?= $livres['nombre_exemplaires'] ?>" id="nbexp">
+  </div>
+  <div class="form-row">
+    <label for="langue">Language :</label>
+    <input type="text" name="langue" class="form-control" value="<?= $livres['langue'] ?>" id="langue">
+  </div>
+  <div class="form-row">
+    <label for="image">Cover image (URL) :</label>
+    <input type="text" name="image" class="form-control" value="<?= $livres['image'] ?>" id="image">
+  </div>
+  <div class="form-row">
+    <label for="nbpage">Number of pages :</label>
+    <input type="text" name="nbpage" class="form-control" value="<?= $livres['nombre_pages'] ?>" id="nbpage">
+  </div>
+
+  <div class="btn-group">
+    <button type="submit" class="btn btn-submit"><i class="bi bi-vector-pen" style="color:white"></i></button>
+    <button type="reset" class="btn btn-reset"><i class="bi bi-trash3-fill" style="color:white"></i></button>
+  </div>
+</form>

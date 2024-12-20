@@ -1,0 +1,696 @@
+<body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
+
+	<!--header-wrap-->
+
+	<section id="billboard">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<button class="prev slick-arrow">
+						<i class="icon icon-arrow-left"></i>
+					</button>
+
+					<div class="main-slider pattern-overlay">
+						<div class="slider-item">
+							<div class="banner-content">
+								<h2 class="banner-title">Pride and Prejudice</h2>
+								<p>Elizabeth Bennet, a lively and intelligent young woman, confronts prejudice and pride in a love story with Mr. Darcy.</p>
+								<div class="btn-wrap">
+									<a href="LivreDetails.php?id=<?= $livre['id']=5 ?>" class="btn btn-outline-accent btn-accent-arrow">Read More<i
+											class="icon icon-ns-arrow-right"></i></a>
+								</div>
+							</div><!--banner-content-->
+							<img  src= <?= $lienimg ?>  alt="banner" style="width:400px" class="banner-image">
+						</div><!--slider-item-->
+						<!--"assets/images/main-banner1.jpg"-->
+						<div class="slider-item">
+							<div class="banner-content">
+								<h2 class="banner-title"> Les Misérables</h2>
+								<p>A sweeping tale of love, redemption, and social injustice set against the backdrop of 19th-century France.</p>
+								<div class="btn-wrap">
+									<a href="LivreDetails.php?id=<?= $livre['id']=10 ?>" class="btn btn-outline-accent btn-accent-arrow">Read More<i
+											class="icon icon-ns-arrow-right"></i></a>
+								</div>
+							</div><!--banner-content-->
+							<img  src= <?= $lienimg2 ?>  style="width:400px" alt="banner" class="banner-image">
+						</div><!--slider-item-->
+
+					</div><!--slider-->
+
+					<button class="next slick-arrow">
+						<i class="icon icon-arrow-right"></i>
+					</button>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section id="client-holder" data-aos="fade-up">
+		<div class="container">
+			<div class="row">
+				<div class="inner-content">
+					<div class="logo-wrap">
+						<div class="grid">
+							<a href="#"><img src="assets/images/client-image1.png" alt="client"></a>
+							<a href="#"><img src="assets/images/client-image2.png" alt="client"></a>
+							<a href="#"><img src="assets/images/client-image3.png" alt="client"></a>
+							<a href="#"><img src="assets/images/client-image4.png" alt="client"></a>
+							<a href="#"><img src="assets/images/client-image5.png" alt="client"></a>
+						</div>
+					</div><!--image-holder-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="featured-books" class="py-5 my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="section-header align-center">
+						<div class="title">
+							<span>Some quality items</span>
+						</div>
+						<h2 class="section-title">Featured Books</h2>
+					</div>
+
+					<div class="product-list" data-aos="fade-up">
+						<div class="row">
+						<?php foreach($infos as $info) :?>
+							<div class="col-md-3" >
+								<div class="product-item" >
+									<figure class="product-style" >
+										<img src= <?= $info["image"] ?>   alt="Books" class="product-item">
+										<a href="LivreDetails.php?id=<?= $info['id'] ?>" class="btn add-to-cart">Show More</a>
+
+									</figure>
+									<figcaption>
+										<h3><?= $info["titre"] ?> </h3>
+										<span><?= $info["auteur"] ?> </span>
+										<div class="item-price">$ 40.00</div>
+									</figcaption>
+								</div>
+							</div>
+							<?php endforeach ?>
+
+						</div><!--ft-books-slider-->
+					</div><!--grid-->
+
+
+				</div><!--inner-content-->
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="btn-wrap align-right">
+						<a href="#" class="btn-accent-arrow">View all products <i
+								class="icon icon-ns-arrow-right"></i></a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="best-selling" class="leaf-pattern-overlay">
+		<div class="corner-pattern-overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+
+				<div class="col-md-8">
+
+					<div class="row">
+
+						<div class="col-md-6">
+							<figure class="products-thumb">
+								<img src=<?=$ligne3["image"] ?> alt="book" class="single-image">
+							</figure>
+						</div>
+
+						<div class="col-md-6">
+							<div class="product-entry">
+								<h2 class="section-title divider">Best Selling Book</h2>
+
+								<div class="products-content">
+									<div class="author-name"><?= $ligne3["auteur"]?></div>
+									<h3 class="item-title"><?= $ligne3["titre"]?></h3>
+									<p><?= $ligne3["resume"]?>
+									</p>
+									<div class="item-price">$ 45.00</div>
+									<div class="btn-wrap">
+									<a href="LivreDetails.php?id=<?= $ligne3['id'] ?>" class="btn add-to-cart">Show More
+										 <i class="icon icon-ns-arrow-right"></i></a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+					<!-- / row -->
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="popular-books" class="bookshelf py-5 my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="section-header align-center">
+						<div class="title">
+							<span>Some quality items</span>
+						</div>
+						<h2 class="section-title">Popular Books</h2>
+					</div>
+
+					<ul class="tabs">
+						<li data-tab-target="#all-genre" class="active tab">All Genre</li>
+						<li data-tab-target="#romantic" class="tab">Romantic</li>
+						<li data-tab-target="#adventure" class="tab">Adventure</li>
+						<li data-tab-target="#fictional" class="tab">Fictional</li>
+					</ul>
+
+					<div class="tab-content">
+						<div id="all-genre" data-tab-content class="active">
+							<div class="row">
+							<?php foreach($details as $detail) :?>
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src= <?= $detail["image"] ?> alt="Books" class="product-item">
+											<button type="button" class="add-to-cart" data-product-tile="add-to-cart"><a style="text-decoration: none;color:white;" href="LivreDetails.php?id=<?= $detail['id'] ?>" >Show More</a></button>
+										</figure>
+										<figcaption>
+											<h3><?= $detail["titre"] ?></h3>
+											<span><?= $detail["auteur"] ?></span>
+											<div class="item-price">$ 45.00</div>
+										</figcaption>
+									</div>
+								</div>
+								<?php endforeach ?>
+							</div>
+								<div class="row">
+									<?php foreach($detailslivre as $detaillivre) :?>
+										<div class="col-md-3">
+											<div class="product-item">
+												<figure class="product-style">
+													<img src=<?= $detaillivre["image"] ?> alt="Books" class="product-item">
+													<button type="button" class="add-to-cart" data-product-tile="add-to-cart"><a style="text-decoration: none;color:white;" href="LivreDetails.php?id=<?= $detaillivre['id'] ?>">Show More</a></button>
+												</figure>
+												<figcaption>
+													<h3><?= $detaillivre["titre"] ?></h3>
+													<span><?= $detaillivre["auteur"] ?></span>
+													<div class="item-price">$ 50.00</div>
+												</figcaption>
+											</div>
+										</div>
+										<?php endforeach ?>
+									</div>
+								</div>
+
+						
+
+						<div id="romantic" data-tab-content>
+							<div class="row">
+							<?php foreach($romancelivs as $romanceliv) :?>
+										<div class="col-md-3">
+											<div class="product-item">
+												<figure class="product-style">
+													<img src=<?= $romanceliv["image"] ?> alt="Books" class="product-item">
+													<button type="button" class="add-to-cart" data-product-tile="add-to-cart"><a style="text-decoration: none;color:white;" href="LivreDetails.php?id=<?= $romanceliv['id'] ?>">Show More</a></button>
+												</figure>
+												<figcaption>
+													<h3><?= $romanceliv["titre"] ?></h3>
+													<span><?= $romanceliv["auteur"] ?></span>
+													<div class="item-price">$ 60.00</div>
+												</figcaption>
+											</div>
+										</div>
+									 <?php endforeach ?>
+							</div>
+						</div>
+
+						<div id="adventure" data-tab-content>
+							<div class="row">
+							<?php foreach($advlivs as $advliv) :?>
+										<div class="col-md-3">
+											<div class="product-item">
+												<figure class="product-style">
+													<img src=<?=$advliv["image"] ?> alt="Books" class="product-item">
+													<button type="button" class="add-to-cart" data-product-tile="add-to-cart"><a style="text-decoration: none;color:white;" href="LivreDetails.php?id=<?= $advliv['id'] ?>">Show More</a></button>
+												</figure>
+												<figcaption>
+													<h3><?= $advliv["titre"] ?></h3>
+													<span><?= $advliv["auteur"] ?></span>
+													<div class="item-price">$ 100.00</div>
+												</figcaption>
+											</div>
+										</div>
+									 <?php endforeach ?>
+
+								
+							</div>
+						</div>
+
+						<div id="fictional" data-tab-content>
+							<div class="row">
+								<?php foreach($ficlivs as $ficliv) :?>
+										<div class="col-md-3">
+											<div class="product-item">
+												<figure class="product-style">
+													<img src=<?=$ficliv["image"] ?> alt="Books" class="product-item">
+													<button type="button" class="add-to-cart" data-product-tile="add-to-cart"><a style="text-decoration: none;color:white;" href="LivreDetails.php?id=<?=$ficliv['id'] ?>">Show More</a></button>
+												</figure>
+												<figcaption>
+													<h3><?= $ficliv["titre"] ?></h3>
+													<span><?=$ficliv["auteur"] ?></span>
+													<div class="item-price">$ 20.00</div>
+												</figcaption>
+											</div>
+										</div>
+									 <?php endforeach ?>
+								
+							</div>
+						</div>
+
+					</div>
+
+				</div><!--inner-tabs-->
+
+			</div>
+		</div>
+	</section>
+
+	<section id="quotation" class="align-center pb-5 mb-5">
+		<div class="inner-content">
+			<h2 class="section-title divider">Quote of the day</h2>
+			<blockquote data-aos="fade-up">
+				<q>“The more that you read, the more things you will know. The more that you learn, the more places
+					you’ll go.”</q>
+				<div class="author-name">Dr. Seuss</div>
+			</blockquote>
+		</div>
+	</section>
+
+	<section id="special-offer" class="bookshelf pb-5 mb-5">
+
+		<div class="section-header align-center">
+			<div class="title">
+				<span>Grab your opportunity</span>
+			</div>
+			<h2 class="section-title">Books with offer</h2>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="inner-content">
+					<div class="product-list" data-aos="fade-up">
+						<div class="grid product-grid">
+							<?php foreach ($offerlivs as $offerliv) :?>
+							<div class="product-item">
+								<figure class="product-style">
+									<img src= <?=$offerliv["image"]?> alt="Books" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart"><a style="text-decoration: none;color:white;" href="LivreDetails.php?id=<?=$offerliv['id'] ?>">Show More</a></button>
+								</figure>
+								<figcaption>
+									<h3><?=$offerliv["titre"]?></h3>
+									<span><?=$offerliv["auteur"]?></span>
+									<div class="item-price">
+										<span class="prev-price">$ 50.00</span>$ 40.00
+									</div>
+								</div>
+							</figcaption>
+							<?php endforeach ?>
+
+							
+
+							
+
+							
+
+							
+						</div><!--grid-->
+					</div>
+				</div><!--inner-content-->
+			</div>
+		</div>
+	</section>
+
+	<section id="subscribe">
+		<div class="container">
+			<div class="row justify-content-center">
+
+				<div class="col-md-8">
+					<div class="row">
+
+						<div class="col-md-6">
+
+							<div class="title-element">
+								<h2 class="section-title divider">Subscribe to our newsletter</h2>
+							</div>
+
+						</div>
+						<div class="col-md-6">
+
+							<div class="subscribe-content" data-aos="fade-up">
+								<p>"Stay updated with the latest book releases, exclusive discounts, and curated reading lists. Sign up now and never miss a story!".</p>
+								<form id="form">
+									<input type="text" name="email" placeholder="Enter your email addresss here">
+									<button class="btn-subscribe">
+										<span>send</span>
+										<i class="icon icon-send"></i>
+									</button>
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="latest-blog" class="py-5 my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="section-header align-center">
+						<div class="title">
+							<span>Read our articles</span>
+						</div>
+						<h2 class="section-title">Latest Articles</h2>
+					</div>
+
+					<div class="row">
+
+						<div class="col-md-4">
+
+							<article class="column" data-aos="fade-up">
+
+								<figure>
+									<a href="#" class="image-hvr-effect">
+										<img src="assets/images/post-img1.jpg" alt="post" class="post-image">
+									</a>
+								</figure>
+
+								<div class="post-item">
+									<div class="meta-date">Mar 30, 2021</div>
+									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+
+									<div class="links-element">
+										<div class="categories">inspiration</div>
+										<div class="social-links">
+											<ul>
+												<li>
+													<a href="#"><i class="icon icon-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon icon-twitter"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon icon-behance-square"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div><!--links-element-->
+
+								</div>
+							</article>
+
+						</div>
+						<div class="col-md-4">
+
+							<article class="column" data-aos="fade-up" data-aos-delay="200">
+								<figure>
+									<a href="#" class="image-hvr-effect">
+										<img src="assets/images/post-img2.jpg" alt="post" class="post-image">
+									</a>
+								</figure>
+								<div class="post-item">
+									<div class="meta-date">Mar 29, 2021</div>
+									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+
+									<div class="links-element">
+										<div class="categories">inspiration</div>
+										<div class="social-links">
+											<ul>
+												<li>
+													<a href="#"><i class="icon icon-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon icon-twitter"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon icon-behance-square"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div><!--links-element-->
+
+								</div>
+							</article>
+
+						</div>
+						<div class="col-md-4">
+
+							<article class="column" data-aos="fade-up" data-aos-delay="400">
+								<figure>
+									<a href="#" class="image-hvr-effect">
+										<img src="assets/images/post-img3.jpg" alt="post" class="post-image">
+									</a>
+								</figure>
+								<div class="post-item">
+									<div class="meta-date">Feb 27, 2021</div>
+									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+
+									<div class="links-element">
+										<div class="categories">inspiration</div>
+										<div class="social-links">
+											<ul>
+												<li>
+													<a href="#"><i class="icon icon-facebook"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon icon-twitter"></i></a>
+												</li>
+												<li>
+													<a href="#"><i class="icon icon-behance-square"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div><!--links-element-->
+
+								</div>
+							</article>
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="btn-wrap align-center">
+							<a href="#" class="btn btn-outline-accent btn-accent-arrow" tabindex="0">Read All Articles<i
+									class="icon icon-ns-arrow-right"></i></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="download-app" class="leaf-pattern-overlay">
+		<div class="corner-pattern-overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="row">
+
+						<div class="col-md-5">
+							<figure>
+								<img src="assets/images/device.png" alt="phone" class="single-image">
+							</figure>
+						</div>
+
+						<div class="col-md-7">
+							<div class="app-info">
+								<h2 class="section-title divider">Download our app now !</h2>
+								<p>Dive into the world of books like never before. Browse thousands of titles, discover personalized recommendations, and enjoy exclusive discounts — all from the comfort of your phone..</p>
+								<div class="google-app">
+									<img src="assets/images/google-play.jpg" alt="google play">
+									<img src="assets/images/app-store.jpg" alt="app store">
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4">
+
+					<div class="footer-item">
+						<div class="company-brand">
+							<img src="assets/images/main-logo.png" alt="logo" class="footer-logo">
+							<p>"Rediscover the joy of reading with BOOKSAW. Explore a vast collection of books across all genres, get tailored recommendations, and access unbeatable offers. Your next favorite story awaits!"</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>About Us</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">vision</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">articles </a>
+							</li>
+							<li class="menu-item">
+								<a href="#">careers</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">service terms</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">donate</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>Discover</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Books</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Authors</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Subjects</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Advanced Search</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>My account</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Sign In</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">View Cart</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">My Wishtlist</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Track My Order</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-2">
+
+					<div class="footer-menu">
+						<h5>Help</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Help center</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Report a problem</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Suggesting edits</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Contact us</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- / row -->
+
+		</div>
+	</footer>
+
+	<div id="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="copyright">
+						<div class="row">
+
+							
+
+							<div class="col-md-6">
+								<div class="social-links align-right">
+									<ul>
+										<li>
+											<a href="#"><i class="icon icon-facebook"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-twitter"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-youtube-play"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-behance-square"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div><!--grid-->
+
+				</div><!--footer-bottom-content-->
+			</div>
+		</div>
+	</div>
+	
+	
+</body>

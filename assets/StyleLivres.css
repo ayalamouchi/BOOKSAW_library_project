@@ -1,0 +1,186 @@
+
+
+#bodyLivres {
+    margin: 30px auto;
+    background-color: #f3f2ec;
+   
+
+  }
+  #bodyLivres .container .row .col-md-4 {
+    flex: 0 0 calc(25% - 15px) !important; 
+    max-width: calc(25% - 15px) !important;
+    margin-bottom: 20px !important;
+  }
+  
+  #bodyLivres .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+   
+  }
+  
+
+  #livres_acueille {
+    background-color: #f3f2ec;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    border: none;
+    
+  }
+  
+.cadre{
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: #F3F2EC;
+  }
+
+  
+
+
+
+  .product-style:hover button.add-to-cart {
+    bottom: 380px;
+    bottom: 0;
+  }
+  
+  
+  #livres_acueille img {
+    margin: auto;
+    width: 87%;
+    height: 290px !important; 
+    object-fit: cover !important; 
+  }
+ 
+  
+  #livres_acueille .card-body {
+    padding: 15px;
+
+  }
+  
+  #livres_acueille .card-title {
+    font-size: 1.4em; 
+    font-weight: 500; 
+    margin-bottom: 5px;
+    color: #74642F;
+
+  }
+.bi{
+    color:#74642F;
+}
+button{
+    background-color:#F3F2EC ;
+}
+
+ 
+
+
+  #livres_acueille .card-dispo{
+    color: #74642F;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+  #livres_acueille .card-auteur {
+    font-size: 1.1rem;
+    color: #6f6f6f;
+    margin-bottom: 5px;
+  }
+  
+
+  #livres_acueille .btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+ 
+  #livres_acueille .d-flex a {
+    margin: 0 7px;
+  }
+  
+  #bodyLivres .container {
+    padding: 0 15px;
+  }
+
+
+
+
+
+
+
+
+
+.cadre {
+    position: relative;
+  }
+  
+  #livres_acueille img {
+    width: 100%;
+    height: 285px !important;
+    object-fit: cover !important;
+    transition: opacity 0.3s ease;
+  }
+  
+  .see-more{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 100%;
+    height: 60px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    
+    text-decoration: none;
+    padding: 15px;
+    font-size: 1.3em; 
+    font-weight: 500; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .cadre:hover .see-more {
+    opacity: 1;
+    visibility: visible;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.3em; 
+    font-weight: 500; 
+  }
+  
+ 
+  @media screen and (max-width: 768px) {
+    #livres_acueille img {
+      height: auto;
+    }
+  }
+  
+
+
+  
+  /* Responsive */
+  @media screen and (max-width: 992px) {
+    #bodyLivres .container .row .col-md-4 {
+      flex: 0 0 calc(33.33% - 15px) !important; /* 3 colonnes sur tablettes */
+      max-width: calc(33.33% - 15px) !important;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #bodyLivres .container .row .col-md-4 {
+      flex: 0 0 calc(50% - 15px) !important; /* 2 colonnes sur mobiles */
+      max-width: calc(50% - 15px) !important;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #bodyLivres .container .row .col-md-4 {
+      flex: 0 0 100% !important; /* 1 colonne sur très petits écrans */
+      max-width: 100% !important;
+    }
+  }
+  

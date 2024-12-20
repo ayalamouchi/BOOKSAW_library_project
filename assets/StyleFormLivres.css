@@ -1,0 +1,112 @@
+#adherent-form, #book-form {
+    background-color: #f3f2ec;
+    color: #2e2e2e; 
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    position: relative;
+}
+
+#adherent-form h2, #book-form h2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #d9cbb3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#adherent-form .form-row, #book-form .form-row {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 25px;
+}
+
+#adherent-form .form-row label, #book-form .form-row label {
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+i{
+    font-size: x-large;
+    font-weight: bold;
+   
+}
+#adherent-form input[type="text"], 
+#adherent-form input[type="number"], 
+#adherent-form textarea,
+#book-form input[type="text"], 
+#book-form input[type="number"], 
+#book-form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000; 
+    padding: 8px;
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    color: #2e2e2e;
+    transition: border-color 0.3s ease;
+}
+
+#adherent-form input[type="text"]:focus,
+#adherent-form input[type="number"]:focus,
+#adherent-form textarea:focus,
+#book-form input[type="text"]:focus,
+#book-form input[type="number"]:focus,
+#book-form textarea:focus {
+    border-bottom: 2px solid #8b572a; 
+}
+
+#adherent-form .btn-group, #book-form .btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#adherent-form .btn, #book-form .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#adherent-form .btn-submit, #book-form .btn-submit {
+    background-color: #000;
+
+}
+
+#adherent-form .btn-submit:hover, #book-form .btn-submit:hover {
+    background-color: #8b572a; 
+}
+
+#adherent-form .btn-reset, #book-form .btn-reset {
+    background-color: #d9cbb3; 
+    color: #000;
+}
+
+#adherent-form .btn-reset:hover, #book-form .btn-reset:hover {
+    background-color: #cbb394; 
+}
+
+@media (max-width: 768px) {
+    #adherent-form, #book-form {
+        padding: 20px;
+    }
+
+    #adherent-form .form-row, #book-form .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #adherent-form .btn-group, #book-form .btn-group {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,36 @@
+
+
+<div class="carte-container">
+  <?php foreach ($cls as $adherent) : ?>
+    <div class="card_adr">
+      <!-- Image de profil -->
+      <div class="adr-image">
+        <img src="assets/USER_IMG.jpg" alt="Adhérent" class="imgA"/>
+      </div>
+      
+      <!-- Informations de l'adhérent -->
+      <div class="adr-info">
+        <p class="np"><?= $adherent["prenom"] ?> <?= $adherent["nom"] ?></p>
+        <p class="d_naiss"><?= $adherent["date_naiss"] ?></p>
+      </div>
+      
+      <!-- Boutons d'action -->
+      <div class="but_adr">
+        <a class="btn_det" href="AdherentDetails.php?id=<?= $adherent['id'] ?>" role="button">
+        <i class="bi bi-person-fill-gear" ></i>
+        </a>
+        <a class="btn_up" href="adherants_update.php?id=<?= $adherent['id'] ?>" role="button">
+          <i class="bi bi-pencil-square" style="background-color: transparent;"></i>
+        </a>
+        <a class="btn_delt" href="adherantssupp.php?id=<?= $adherent['id'] ?>" role="button">
+          <i class="bi bi-person-x"></i>
+        </a>
+      </div>
+    </div>
+  <?php endforeach; ?>
+</div>
+
+<a class="add-btn" href="AjoutAdherent.php" role="button">ADD ADHERENT</a>
+
+
+<!--assets/images/livres/adhrent.webp-->

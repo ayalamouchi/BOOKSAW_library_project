@@ -1,0 +1,39 @@
+<div id="nav_adr" style="background-color:#f3f2ec;" >
+    <span class="fs-4"style="text-decoration: none; color:#74642F;"><span> <i class="bi bi-book-half"style="margin-left: 11px;"></i> </span> Welcome  <?= $_SESSION['nom']  ?></span>
+     <a class="btn_ListeADR" href="ListeAdherent.php" role="button"style="margin-left: 76%; text-decoration: none; color:#74642F;"><i class="bi bi-people-fill"></i> ADHERENTS</a>
+</div>
+            
+<div id="bodyLivres">
+  <div class="container">
+    <div class="row">
+      <?php foreach ($cls as $livre): ?>
+        <div class="col-md-4">
+          <div class="card" id="livres_acueille">
+            <div class="cadre">  
+             
+              <div class="image-container">
+                <img src="<?= $livre['image'] ?>" class="card-img-top" alt="Cover of <?= $livre['titre'] ?>">
+                
+              </div>
+              <a href="LivreDetails.php?id=<?= $livre['id'] ?>" class="see-more">See More</a>
+            </div> 
+
+            <div class="card-body">
+              <h5 class="card-title"><?= $livre['titre'] ?></h5>
+              <p class="card-auteur"><?= $livre['auteur'] ?></p>
+              <p class="card-dispo"><?= $livre['disponibilite'] ?></p>
+
+              <div class="d-flex justify-content-between">
+             
+                <a href="Livreupdate.php?id=<?= $livre['id'] ?>" ><i class="bi bi-pencil-square"></i></a>
+                <a href="LivreSupp.php?id=<?= $livre['id'] ?>" ><i class="bi bi-trash-fill"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+
+  <a class="btn btn-info mt-3" href="AjoutLivre.php" role="button"><i class="bi bi-journal-plus" style="color:white; font-size: xx-large; font-weight: bolder"></i></a>
+</div>

@@ -1,0 +1,120 @@
+.carte-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; 
+    margin-top: 3%;
+    position: relative;
+    background-color: #f3f2ec;
+}
+
+
+.card_adr {
+    width: 230px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_adr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(160, 99, 0, 0.585);
+}
+
+.adr-image .imgA {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.adr-info {
+    padding: 10px 0;
+}
+
+.np {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+    text-decoration: wavy;
+    text-transform: capitalize;
+}
+
+.d_naiss {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+
+.but_adr {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0px;
+   
+   
+}
+
+.but_adr a {
+    font-size: 12px;
+    padding: 5px 8px;
+    
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.but_adr .btn_det{
+    background-color: transparent !important;
+    font-size:x-small;
+    
+}
+
+
+
+.but_adr.btn_up {
+    background-color: transparent !important;
+    font-size:x-small;
+}
+
+
+
+.but_adr .btn_delt{
+    background-color: transparent !important;
+    font-size:x-small;
+}
+
+
+.add-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+ 
+    color: #000000;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    background-color: #f3f2ec;
+    font-weight: bold;
+    justify-items: center; 
+    justify-content: center;
+    margin-left: 45%;
+ 
+
+
+}
+.add-btn:hover{
+    background-color: rgba(160, 99, 0, 0.879);
+    color: white;
+
+}
+
